@@ -10,6 +10,11 @@
 - eclipse sdk: https://github.com/eclipse/eclipse
 http://wiki.eclipse.org/Platform
 
+- Apache camel https://github.com/apache/camel
 
+- openfire 插件机制
+- JIRA
 --------------------------------------
-openfire
+
+
+guice 集成camel http://camel.apache.org/guice.html

@@ -1,6 +1,6 @@
 allprojects {
     //Add configuration here
-    group = 'top.hardest.businessworks'
+    group = 'cn.businessworks'
     version = '1.0'
 
 
@@ -50,6 +50,23 @@ subprojects {
 
 
     dependencies {
+        //google guice
+        compile group: 'javax.inject', name: 'javax.inject', version: '1'
+        compile group: 'javax.inject', name: 'javax.inject-tck', version: '1'
+        compile group: 'aopalliance', name: 'aopalliance', version: '1.0'
+        compile group: 'org.ow2.asm', name: 'asm', version: '5.0.3'
+        compile group: 'cglib', name: 'cglib', version: '3.2.0'
+        //guava
+        compile group: 'com.google.guava', name: 'guava', version: '23.0'
+        //lombok
+        compile group: 'org.projectlombok', name: 'lombok', version: "1.16.8"
+        //log4j
+        compile group: 'org.apache.logging.log4j', name: 'log4j-core', version:'2.5'
+        compile group: 'org.apache.logging.log4j', name: 'log4j-1.2-api', version:'2.5'
+
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+        testCompile group: 'org.assertj', name: 'assertj-core', version:'1.5.0'
+        testCompile 'org.mockito:mockito-all:1.10.19'
         testCompile group: 'junit', name: 'junit', version: '4.11'
     }
 
@@ -65,19 +82,22 @@ subprojects {
 
 //核心模块
 project(':platform-common') {
+
+
     dependencies{
 
-        //guava
+        //apache camel
+//        compile group: 'org.apache.camel', name: 'camel-core', version: '2.20.1'
 
-        //lombok
-        compile group: 'org.projectlombok', name: 'lombok', version: "1.16.8"
-        //log4j
-        compile group: 'org.apache.logging.log4j', name: 'log4j-core', version:'2.5'
-        compile group: 'org.apache.logging.log4j', name: 'log4j-1.2-api', version:'2.5'
 
-        testCompile group: 'junit', name: 'junit', version: '4.12'
-        testCompile group: 'org.assertj', name: 'assertj-core', version:'1.5.0'
-        testCompile 'org.mockito:mockito-all:1.10.19'
+    }
+}
+
+project(':platform-core') {
+
+
+
+    dependencies {
 
     }
 }

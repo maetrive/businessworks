@@ -1,4 +1,4 @@
-rootProject.name = 'businessworks'
+rootProject.name = 'businessworks-platform'
 
 include 'platform-common'
 include 'platform-core'
